@@ -12,6 +12,8 @@ FROM employees JOIN titles ON employees.emp_no = titles.emp_no
 WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
 ORDER BY employees.emp_no)
 
+;
+
 
 -- Unique Titles
 SELECT COUNT(emp_no), title
@@ -27,6 +29,8 @@ FROM employees JOIN titles ON employees.emp_no = titles.emp_no
 WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
 AND to_date = '9999-01-01'
 ORDER BY employees.emp_no)
+
+;
 
 
 -- Retiring Titles

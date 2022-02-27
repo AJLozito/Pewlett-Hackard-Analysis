@@ -1,7 +1,7 @@
 SELECT COUNT(emp_no),
-		  title,
-		  ROUND(AVG(age),0) AS age,
-		  ROUND(AVG(tenure),0) AS tenure
+		 title,
+		 ROUND(AVG(age),0) AS age,
+		 ROUND(AVG(tenure),0) AS tenure
 
 FROM
 (SELECT employees.emp_no,

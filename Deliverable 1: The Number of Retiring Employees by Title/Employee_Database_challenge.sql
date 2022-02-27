@@ -1,4 +1,4 @@
-SELECT COUNT(emp_no),title
+SELECT COUNT(emp_no), title
 FROM
 (SELECT employees.emp_no,
         first_name,

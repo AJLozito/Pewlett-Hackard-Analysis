@@ -1,17 +1,17 @@
 SELECT COUNT(emp_no),
-			  title,
-			  ROUND(AVG(age),0) AS age,
-			  ROUND(AVG(tenure),0) AS tenure
+		  title,
+		  ROUND(AVG(age),0) AS age,
+		  ROUND(AVG(tenure),0) AS tenure
 
 FROM
 (SELECT employees.emp_no,
- 		    first_name,
- 		    last_name,
- 	  	  title,
- 	    	from_date,
- 		    to_date,
-        (CURRENT_DATE-birth_date)/365 AS age,
-        (CURRENT_DATE-hire_date)/365 AS tenure
+		 first_name,
+		 last_name,
+ 	  	 title,
+ 	    	 from_date,
+ 		 to_date,
+        	 (CURRENT_DATE-birth_date)/365 AS age,
+       		 (CURRENT_DATE-hire_date)/365 AS tenure
 
 FROM employees JOIN titles ON employees.emp_no = titles.emp_no
 WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
